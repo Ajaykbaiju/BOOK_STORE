@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+    <h1>Delete Book: {{ book.title }}</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <h2>Are you sure?</h2>
+        <button type="submit">Yes, Delete</button>
+    </form>
+    <a href="/">Cancel</a> <!-- Add a cancel link to go back -->
+</body>
+{% endblock %} 
